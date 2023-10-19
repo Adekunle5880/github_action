@@ -5,14 +5,18 @@ on:
     branches:
       - master
 
+env:
+  NAME: "ABDUSALAM FATAI"
+  PROFESSION: "Devop Enthusiast"
+  PASSION: "DEVOPS ENGINEERING"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
       - name: Echo Github Actions
-        run:  ls -al
-
+        run:  "Hi, this is {env.NAME}. I am a {env.PROFESSION} & is my passion"
   post-build:
     runs-on: ubuntu-latest
     steps:
